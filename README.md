@@ -50,6 +50,20 @@ the column names (arg2, arg3, arg4) must be passed as string (inside double inve
 
 both outputs are dictionary type.
 
+the table dictionary will have four sub-groups 
+1.Good performers in group1 of arg4
+2.Bad performers in group1 of arg4
+3.Good performers in group2 of arg4
+4.Bad performers in group2 of arg4
+
+Each of these will have columns like, 
+-individual associate
+-actual unfulfiled of that associate
+-actual fulfiled of that associate
+-expected fulfiled of that associate
+-chi value of each associate on basis of actual and expected fulfiled
+-fulfiled percentage ((actual fulfiled/(actual fulfiled+actual unfulfiled))*100)
+
 
 
 when you are calling the result method from the object you created then you have one optional argument to pass in this method which will decide the percentage of Top and Bottom associates in each group. 
