@@ -1,19 +1,19 @@
 Interpreted result
 {
-'Salesman Good in both': [41, 25, 42, 46, 35, 78, 29, 65, 1, 43, 4, 70, 49, 71, 68, 39, 44, 53, 81, 83],
- 'Salesman Bad in both': [0, 63, 69, 59, 76, 55, 75, 2, 60, 56, 51, 48, 84, 66, 62], 
- 'Salesman Good in HAP but bad in WEB': [38, 33, 54, 52, 37],
- 'Salesman Good in WEB but bad in HAP': [58, 77, 61, 79, 67, 80, 74],
- 'Top 30% Salesman in WEB': [25, 41, 42, 78, 46, 35, 65, 29, 1, 71], 
- 'Top 30% Salesman in HAP': [41, 25, 42, 46, 35, 78, 29, 65, 1], 
- 'Bottom 30% Salesman in WEB': [0, 2, 63, 37, 56, 51],
- 'Bottom 30% Salesman in HAP': [0, 63, 69, 59, 76, 55, 75]
+ 'Associates  Good in both': [41, 25, 42, 46, 35, 78, 29, 65, 1, 43, 4, 70, 49, 71, 68, 39, 44, 53, 81, 83],
+ 'Associates  Bad in both': [0, 63, 69, 59, 76, 55, 75, 2, 60, 56, 51, 48, 84, 66, 62], 
+ 'Associates  Good in HAP but bad in WEB': [38, 33, 54, 52, 37],
+ 'Associates  Good in WEB but bad in HAP': [58, 77, 61, 79, 67, 80, 74],
+ 'Top 30% Associates  in WEB': [25, 41, 42, 78, 46, 35, 65, 29, 1, 71], 
+ 'Top 30% Associates  in HAP': [41, 25, 42, 46, 35, 78, 29, 65, 1], 
+ 'Bottom 30% Associates  in WEB': [0, 2, 63, 37, 56, 51],
+ 'Bottom 30% Associates  in HAP': [0, 63, 69, 59, 76, 55, 75]
  }
 
 
 table result
 {'good performers HAP': 
-'{"columns":["Salesman_id","Actual Unsold","Actual Sale","Expected Sale","Chi_Sold","sale_percentage"],
+'{"columns":["Salesman_id","Actual unfulfiled","Actual fulfiled","Expected fulfiled","Chi_fulfiled","fulfiled_percentage"],
 "index":[41,25,42,46,35,78,29,65,1,43,4,70,49,38,33,73,72,71,47,68,39,54,44,53,81,83,52,37],
 "data":
 [
@@ -31,7 +31,7 @@ table result
 
 'bad performers HAP':
 '{
-    "columns":["Salesman_id","Actual Unsold","Actual Sale","Expected Sale","Chi_Sold","sale_percentage"],
+    "columns":["Salesman_id","Actual unfulfiled","Actual fulfiled","Expected fulfiled","Chi_fulfiled","fulfiled_percentage"],
     "index":[0,63,69,59,76,55,75,58,2,60,56,51,74,67,48,84,66,62,61,79,77,80],
     "data":
     [
@@ -51,7 +51,7 @@ table result
  
 'good performers WEB':
 '{
-    "columns":["Salesman_id","Actual Unsold","Actual Sale","Expected Sale","Chi_Sold","sale_percentage"],
+    "columns":["Salesman_id","Actual unfulfiled","Actual fulfiled","Expected fulfiled","Chi_fulfiled","fulfiled_percentage"],
     "index":[25,41,42,78,46,35,65,29,1,71,58,53,36,70,77,68,61,4,39,81,43,49,83,79,3,28,5,67,80,44,74], 
     "data":
     [
@@ -76,7 +76,7 @@ table result
  
  'bad performers WEB':
 '{
-    "columns":["Salesman_id","Actual Unsold","Actual Sale","Expected Sale","Chi_Sold","sale_percentage"],
+    "columns":["Salesman_id","Actual unfulfiled","Actual fulfiled","Expected fulfiled","Chi_fulfiled","fulfiled_percentage"],
     "index":[0,2,63,37,56,51,33,52,38,59,48,75,66,84,76,69,55,60,62,54],
     "data":
     [
