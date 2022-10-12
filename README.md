@@ -1,47 +1,48 @@
 # business_brio
-**business_brio** (pronounced “Business Brio”) is an open-source python package which contains 
+**business_brio** (pronounced “Business Brio”) is an open-source python package which contains sub-module named 'performance_rank_discrete'
+This submodule has one class named 'test' and this has one method named 'result'.
 
-But, this package(bhargabchipkg) will help you to sort out the salesman performance (good or bad).
+This sub-module of the package(business_brio) will help you to get interpretation of several associates' performance (good or bad) 
+on basis of two groups.
 
 ## How the dataset should be?
 
-It is applicable for sales data having minimum three columns:
- salesman id (or name, etc having more than one level).
- saleflag i.e. 0 and 1 where 0 refers unsold and 1 refers sold.
- type of item (only two levels i.e. two types of items).
+It is applicable for many uscases.
+Lets say a dataset has three columns:
+ 1.Salesman id (having more than one level e.g. 36, PQ23, N2Z4, etc.).
+ 2.Saleflag i.e. 0 and 1 where 0 refers unsold and 1 refers sold (this may be 0 for unfulfiled cases and 1 for fulfiled cases).
+ 3.Type of market (only two levels i.e. two types of market e.g. urban, rural ).
 
 
 ## How to install our package?
 
 ```
-pip install bhargabchipkg
+pip install business_brio
 ```
 
 ## how to import and see the desired output?
 ```
-from bhargabchipkg import chitest_rs
-obj=chitest_rs.ChiTest2(arg1,arg2,arg3,arg4)
-table,intpret=obj.chi_test(n=30)
-print("Interpreted result:")
+from business_brio import performance_rank_discrete
+obj=performance_rank_discrete.test(arg1, arg2, arg3, arg4)
+table,intpret=obj.result(n=20)
 print(intpret)
-print("table result:")
 print(table)
 ```
 ## Arguments of the method chitest_rs.ChiTest2(arg1, arg2, arg3, arg4):
 
 **It takes four inputs:**
 
-**arg1. a dataframe with categorical columns for input as well as output**
+**arg1. a dataframe with minimum three columns for input**
 
-**arg2. Input categorical column name (more than one level)**
+**arg2. Associate categorical column name (more than one level)**
 
-**arg3. Output categorical column name (should have two levels 0 and 1. Where 0 refers unsold and 1 refers sold)**
+**arg3. Output categorical column name (should have two levels 0 and 1. Where 0 refers unfulfiled and 1 refers fulfiled)**
 
-**arg4. Group column name (should have two levels)**
+**arg4. Group column name (should have two levels i.e. two group names)**
 
 the column names (arg2, arg3, arg4) must be passed as string (inside double inverted commas)
 
-**It returns two:**
+**It returns two objects:**
 
 **return1: table**
 
@@ -50,14 +51,15 @@ the column names (arg2, arg3, arg4) must be passed as string (inside double inve
 both outputs are dictionary type.
 
 
-when you are calling the chi_square method from the object we created then you have one option (one argument to pass ) to change the Top and Bottom percentage 
-(by default this percentage is set to 30% ).
+
+when you are calling the result method from the object you created then you have one optional argument to pass in this method which will decide the percentage of Top and Bottom associates in each group. 
+**(by default this percentage is set to 30% )**.
 
 For example:
 ```
-from bhargabchipkg import chitest_rs
-obj=chitest_rs.ChiTest2(arg1,arg2,arg3,arg4)
-table,intpret=obj.chi_test(n=20)
+from business_brio import performance_rank_discrete
+obj=performance_rank_discrete.test(df,"salesman","saleflag","market")
+table,intpret=obj.result(n=20)
 print("Interpreted result:")
 print(intpret)
 print("table result:")
@@ -65,24 +67,22 @@ print(table)
 ```
 In this above code you will get interpretation of the salesman performance like 
 
-Salesman good in both grp 1 and grp 2
+Associates good in both urban and rural
 
-salesman bad in both grp 1 and grp 2
+Associates bad in both urban and rural
 
-Top 20% salesman in grp 1
+Top 20% Associates in urban
 
-Bottom 20% salesman in grp 1.
+Bottom 20% Associates in urban.
 
-Top 20% salesman in grp 2
+Top 20% Associates in rural
 
-Bottom 20% salesman in grp 2.
+Bottom 20% Associates in rural.
 
-N.B: Grp 1 and grp 2 are the two levels of arg4
+N.B: 1.'urban' and 'rural' are the two levels of arg4
+     2. 'df' is the name of the dataframe having columns "salesman", "saleflag", "market".
 
    
-   
-
-
 ## Errors:
  
  If you are getting error messages. Please check the following:
@@ -101,14 +101,14 @@ Useful links and licenses:
  
 You can also see the tested python file : https://github.com/bhargabganguli/bhargabchipkg/blob/main/test_code.py
 
-Source code:https://github.com/bhargabganguli/bhargabchipkg.git
+Source code:https://github.com/bhargabganguli/business_brio.git
 
-Bug reports: https://github.com/bhargabganguli/bhargabchipkg/issues
+Bug reports: https://github.com/bhargabganguli/business_brio/issues
 
 
 License
 Â© 2022 Bhargab Ganguli
 
 This repository is licensed under the MIT license. 
-See  https://github.com/bhargabganguli/bhargabchipkg/blob/0.0.4/LICENSE   for details.
+See at   https://github.com/bhargabganguli/business_brio/blob/0.0.4/LICENSE   for details.
 
