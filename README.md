@@ -110,5 +110,5 @@ License
 Â© 2022 Bhargab Ganguli
 
 This repository is licensed under the MIT license. 
-See at   https://github.com/bhargabganguli/business_brio/blob/0.0.4/LICENSE   for details.
+See at   https://github.com/bhargabganguli/business_brio/blob/main/README.md   for details.
 
