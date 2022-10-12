@@ -34,7 +34,7 @@ long_description1 = """
 
 setup(name='business_brio',
       packages = ['business_brio'],
-      version='0.1.0',
+      version='0.0.1',
       description='A very much helpful package to see performance rankings',
       long_description= long_description1,
       url='https://github.com/bhargabganguli/business_brio.git',
